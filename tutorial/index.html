@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="./vue.js"></script>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1> vue.js</h1>
+        <ol>
+            <li v-for="demo in demos">
+                <a class="index-title" v-bind:href="demo.href"> {{demo.title}}</a>
+                <div class="index-content">{{ demo.content }}</div>
+            </li>
+        </ol>
+    </div>
+
+</body>
+<script>
+    const app = new Vue({
+        el: '.container',
+        data: {
+            demos: [{
+                title: 'demo1',
+                href: './demo1.html',
+                content: '声明式渲染'
+            }, {
+                title: 'demo2',
+                href: './demo2.html',
+                content: '声明式渲染 2'
+            }, {
+                title: 'demo3',
+                href: './demo3.html',
+                content: '条件'
+            }, {
+                title: 'demo4',
+                href: './demo4.html',
+                content: '循环'
+            }, {
+                title: 'demo5',
+                href: './demo5.html',
+                content: '处理用户输入'
+            }, {
+                title: 'demo6',
+                href: './demo6.html',
+                content: '处理用户输入 2'
+            },]
+        }
+    })
+
+</script>
+
+</html>

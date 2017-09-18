@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <script src="https://unpkg.com/vue"></script> -->
+
+    <script src="./vue.js"></script>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="demo">
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </div>
+    <div class="console">
+        <div>console</div>
+        demo.todos.push({
+            text:'vue.js'
+        });
+    </div>
+
+</body>
+<script>
+    const demo = new Vue({
+        el: '#demo',
+        data: {
+            todos: [
+                { text: '学习 JavaScript' },
+                { text: '学习 Vue' },
+                { text: '整个牛项目' }
+            ]
+        },
+    });
+
+</script>
+
+</html>
